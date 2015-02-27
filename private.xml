@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<root>
+    <!--Definite apps-->
+    <appdef>
+      <appname>RUBYMINE</appname>
+      <equal>com.jetbrains.rubymine</equal>
+    </appdef>
+
+    <replacementdef>
+      <replacementname>CTRL_D_FWD_DLT_IGNORE_APPS</replacementname>
+      <replacementvalue>RUBYMINE</replacementvalue>
+    </replacementdef>
+
+    <item>
+        <name>Switch between desktops with </name>
+        <identifier>private.sw</identifier>
+        <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L, KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L </autogen>
+        <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L, KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L </autogen>
+        <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L, KeyCode::CURSOR_UP, ModifierFlag::CONTROL_L </autogen>
+        <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L, KeyCode::CURSOR_DOWN, ModifierFlag::CONTROL_L </autogen>
+    </item>
+
+    <item>
+      <name>Disable all settings while you are using conkeror.</name>
+      <identifier>private.ignore_conkeror</identifier>
+      <only>conkeror</only>
+      <autogen>__PassThrough__</autogen>
+    </item>
+</root>
