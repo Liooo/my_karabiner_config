@@ -1,16 +1,20 @@
+<!--I should be at ~/Library/Application Support/Karabiner-->
+
 <?xml version="1.0"?>
 <root>
-    <!--Definite apps-->
+
+<!--Definite Apps-->
     <appdef>
       <appname>RUBYMINE</appname>
       <equal>com.jetbrains.rubymine</equal>
     </appdef>
 
-    <replacementdef>
-      <replacementname>CTRL_D_FWD_DLT_IGNORE_APPS</replacementname>
-      <replacementvalue>RUBYMINE</replacementvalue>
-    </replacementdef>
+    <appdef>
+      <appname>GOOGLECHROME</appname>
+      <equal>com.google.Chrome</equal>
+    </appdef>
 
+<!-- Definite Operations -->
     <item>
         <name>Switch between desktops with </name>
         <identifier>private.sw</identifier>
@@ -19,11 +23,20 @@
         <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L, KeyCode::CURSOR_UP, ModifierFlag::CONTROL_L </autogen>
         <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L, KeyCode::CURSOR_DOWN, ModifierFlag::CONTROL_L </autogen>
     </item>
-
-    <item>
-      <name>Disable all settings while you are using conkeror.</name>
-      <identifier>private.ignore_conkeror</identifier>
-      <only>conkeror</only>
-      <autogen>__PassThrough__</autogen>
-    </item>
+    
+<!-- Over writing definitions in /Applications/Karabiner.app/Contents/Resources/replacementdef.xml -->
+    <replacementdef>
+      <replacementname>EMACS_MODE_IGNORE_APPS</replacementname>
+      <replacementvalue>
+        ECLIPSE,
+        EMACS,
+        REMOTEDESKTOPCONNECTION,
+        TERMINAL,
+        VI,
+        VIRTUALMACHINE,
+        X11,
+        GOOGLECHROME,
+        RUBYMINE
+      </replacementvalue>
+    </replacementdef>
 </root>
